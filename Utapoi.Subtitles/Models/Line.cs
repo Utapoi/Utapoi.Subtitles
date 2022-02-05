@@ -8,13 +8,13 @@ public class Line
 
     public TimeSpan Start { get; set; }
 
-    public TimeSpan  End { get; set; }
+    public TimeSpan End { get; set; }
 
-    public TimeSpan Duration { get; set; }
+    public TimeSpan Duration => End - Start;
 
     public LineType Type { get; set; } = LineType.None;
 
     public string Text { get; set; } = string.Empty;
 
-    public Karaoke? Karaoke { get; set; }
+    public IList<Karaoke>? Karaoke { get; set; }
 }
